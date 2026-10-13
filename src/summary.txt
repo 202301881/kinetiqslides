@@ -1,0 +1,45 @@
+Homepage: recent files, sample templates, [settings, options, etc.]
+
+Workspace: [Home, Files, Insert, Review, Transitions, Animation, Functions, Presentation, Review]
+1. Left sidebar: slide preview 
+2. Bottom: status bar [save, present, views, notes]
+3. Right: flexible sidebar functions [animate, edits]
+4. Top: ribbon bar and functionalities
+5. standard/common presentation software features
+
+Saving options page: [save as, export, settings]
+
+presentations:
+1. Presenter's view
+2. Audience view
+Must sync with each other via Tauri API calls
+
+Main save options:
+1. Main kqs file
+2. Finalized pdf file
+3. Bare pptx file
+
+Interactives:
+Text inputs, buttons, draggables, canvas, hovers, clicks, movements, actions, scroll listener, event listeners
+
+Functions:
+Regex, math, spreadsheet, charts, conditionals, previewing, saves
+
+Animates:
+Hooks, keyframes, basic, intermediate, advanced, customized, controlled
+
+Objects:
+Shapes, texts, audio, video, images, SVGs, icons, interactives, lines, smartchart, tables
+
+Properties:
+Size, color, position, rotation, layer (z-index), animation state & type,  transition state & type, timing, interactive options
+
+Saving option: zip-processing:
+1. Metadata (file information)
+2. Media zip (audio, video, image)
+3. Object components Properties (shape)
+
+Main OS: Windows 11
+Secondary: macOS
+
+No online connections for sign-in, use immediately upon install

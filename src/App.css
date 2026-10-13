@@ -1,119 +1,76 @@
+@import "tailwindcss";
+
 :root {
-  --var-bgcolor-dark: #0f172a;
-  --var-bgcolor-light: #f5f3ff;
-  --var-sidebar-color: #312e81;
-
-  --var-sidebar-width: 250px;
-  --var-maincontent-width: calc(100% - (var(--var-sidebar-width)));
+  --bg-primary: #0b0f19;
+  --bg-secondary: #111827;
+  --bg-tertiary: #1f2937;
+  --bg-card: #1e293b;
+  --border-color: #374151;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+  --accent-purple: #8b5cf6;
 }
 
-html {
-  overflow: hidden;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-}
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: var(--var-bgcolor-light);
-}
-.figureContent {
-  width: 100%;
-  height: 100dvh;
-  display: flex;
-}
-.sideBar {
-  width: var(--var-sidebar-width);
-  height: 100%;
-  background-color: var(--var-sidebar-color);
-
-}
-.appName {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  font-size: 1.6em;
-  font-weight: bold;
-  color: #eee;
-}
-.sideContent {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  font-size: 1.4em;
-  cursor: pointer;
-  transition: 0.25s ease-in-out;
-  color: #eee;
-}
-.sideIcon {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-  margin-right: 10px;
-  color: #eee;
-}
-.sideContent:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.mainContent {
-  width: var(--var-maincontent-width);
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  user-select: none;
 }
 
-.greetings {
-  font-size: 1.8em;
-  margin-top: 15px;
-  margin-left: 15px;
-  font-weight: 500;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
-.templates {
-  width: 100%;
-  height: 45%;
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
-.templateCollapse {
-  display: flex;
-  align-items: center;
-  margin-left: 10px
+
+::-webkit-scrollbar-track {
+  background: #111827;
 }
-.templateDownIcon {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-  border-radius: 5px;
-  transition: 0.25s ease-in-out;
-  cursor: pointer;
+
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 4px;
 }
-.templateDownIcon:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
 }
-.templateList {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin-left: 10px;
-  margin-top: 10px;
+
+/* Slide Canvas Container */
+.canvas-checkerboard {
+  background-color: #0d1117;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-position: -19px -19px;
 }
-.templateClass {
-  width: 200px;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  transition: 0.25s ease-in-out;
+
+/* Element Selection Outline */
+.selected-element-box {
+  outline: 2px solid #38bdf8;
+  outline-offset: 1px;
 }
-.templateClass:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+
+/* Ribbon Active Tab Indicator */
+.ribbon-tab-active {
+  background-color: #1f2937;
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
 }
-.templateImage {
-  width: 180px;
-  height: 100px;
-  background-color: #fff;
-}
-.templateTitle {
-  text-align: center;
-  margin-top: 5px;
+
+/* Form inputs & general interactive styles */
+input, select, textarea, button {
+  font-family: inherit;
+  outline: none;
 }
